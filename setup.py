@@ -47,18 +47,18 @@ with open(os.path.join(current_directory, 'version.txt'), encoding='utf-8') as f
 packages = [p + '/**' for p in find_packages(include='*',exclude=['tests'])]
 
 setuptools.setup(
-    name='h2ogpt',
-    packages=['h2ogpt'],
+    name='SmartGPT',
+    packages=['SmartGPT'],
     package_dir={
-        'h2ogpt': '',
+        'SmartGPT': '',
     },
     package_data={
-        'h2ogpt': list(set([
+        'SmartGPT': list(set([
             'spaces/**',
         ] + packages)),
     },
     exclude_package_data={
-        'h2ogpt': [
+        'SmartGPT': [
             '**/__pycache__/**',
             'models/modelling_RW_falcon40b.py',
             'models/modelling_RW_falcon7b.py',
@@ -70,9 +70,9 @@ setuptools.setup(
     description='',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    author='H2O.ai',
-    author_email='jon.mckinney@h2o.ai, arno@h2o.ai',
-    url='https://github.com/h2oai/h2ogpt',
+    author='Sriram suresh',
+    author_email='sriram78suresh@gmail.com',
+    url='https://github.com/Sriramsureshkumar/SmartGPT_Offline',
     download_url='',
     keywords=['LLM', 'AI'],
     install_requires=install_requires,

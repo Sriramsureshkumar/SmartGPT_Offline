@@ -11,10 +11,13 @@ import typing
 import warnings
 from datetime import datetime
 import requests
+from airllm import AutoModel
 from requests import ConnectTimeout, JSONDecodeError
 from urllib3.exceptions import ConnectTimeoutError, MaxRetryError, ConnectionError
 from requests.exceptions import ConnectionError as ConnectionError2
 from requests.exceptions import ReadTimeout as ReadTimeout2
+# gen.py
+
 from typing import Optional
 if os.path.dirname(os.path.abspath(__file__)) not in sys.path:
     sys.path.append(os.path.dirname(os.path.abspath(__file__)))

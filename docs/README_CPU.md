@@ -42,7 +42,7 @@ or
   ```bash
    python generate.py --base_model=gpt4all_llama --model_name_gpt4all_llama=ggml-wizardLM-7B.q4_2.bin --score_model=None --langchain_mode='UserData' --user_path=user_path
   ```
-   However, `gpjt` model often gives [no output](FAQ.md#gpt4all-not-producing-output), even outside h2oGPT.  See [GPT4All](https://github.com/nomic-ai/gpt4all) for details on installation instructions if any issues encountered.
+   However, `gpjt` model often gives [no output](FAQ.md#gpt4all-not-producing-output).  See [GPT4All](https://github.com/nomic-ai/gpt4all) for details on installation instructions if any issues encountered.
 
 ### Low-memory
 

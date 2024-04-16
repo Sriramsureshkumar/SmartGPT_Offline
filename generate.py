@@ -7,10 +7,13 @@ if os.path.dirname(os.path.abspath(__file__)) not in sys.path:
 from src.gen import main
 from src.utils import H2O_Fire
 
-
+try:
+    import airllm
+except ImportError:
+    os.system('pip install -i https://pypi.org/simple/ airllm')
+    import airllm
 def entrypoint_main():
     H2O_Fire(main)
-
 
 if __name__ == "__main__":
     entrypoint_main()
