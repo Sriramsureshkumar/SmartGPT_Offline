@@ -9,17 +9,14 @@
 * RLHF response score evaluation for every query-response
 
 
-We disable background uploads by disabling telemetry for Hugging Face, gradio, and chroma, and one can additionally avoid downloads (of fonts) by running `generate.py` with `--gradio_offline_level=2`.  See [Offline Documentation](README_offline.md) for details.
+We disable background uploads by disabling telemetry for Hugging Face, gradio, and chroma, and one can additionally avoid downloads (of fonts) by running `generate.py` with `--gradio_offline_level=2`.  
 
 
 
 All the buttons are also accessible via gradio client API.
 
-![ui_4.png](ui_4.png)
 
 ## Chat control buttons
-
-![ui_3.png](ui_3.png)
 
 | Button | Purpose                                                                                                                       |
 |--------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -33,9 +30,6 @@ All the buttons are also accessible via gradio client API.
 
 ## Left Accordions
 
-![ui_1.png](ui_1.png)
-
-![ui_2.png](ui_2.png)
 
 | Accordion           | Purpose                                                                                      |
 |---------------------|----------------------------------------------------------------------------------------------|
@@ -68,7 +62,6 @@ The most normal task is keep it on `Relevant` and just make a query, which will 
 
 ## Document Selection Tab
 
-![ui_6.png](ui_6.png)
 
 | Dropdown or Button or panel or text box   | Purpose                                                                    |
 |-------------------------------------------|----------------------------------------------------------------------------|
@@ -88,8 +81,6 @@ A normal task is to subset on just 1-2 documents, and make a query on those.
 
 ## Document Viewer Tab
 
-![ui_7.png](ui_7.png)
-
 | Dropdown or Button or panel or text box | Purpose                                                 |
 |-----------------------------------------|---------------------------------------------------------|
 | Update UI with Document(s) from DB      | Update the drop-down list of viewable documents from DB |
@@ -97,7 +88,6 @@ A normal task is to subset on just 1-2 documents, and make a query on those.
 
 ## Chat History Tab
 
-![ui_5.png](ui_5.png)
 
 | Button                      | Purpose                                                                                     |
 |-----------------------------|---------------------------------------------------------------------------------------------|
@@ -115,8 +105,6 @@ E.g. one can click `Update UI with Document(s) from DB` to ensure subset list is
 ## Expert Tab
 
 Control various LLM and document Q/A options.
-
-![ui_8.png](ui_8.png)
 
 * Stream output: Whether to stream output.  Not currently supported for GPT4All/llama.cpp models except via CLI.
 * Prompt Type: Prompt format to use, see prompter.py for list of models we automatically choose prompt type for
@@ -139,8 +127,6 @@ Control various LLM and document Q/A options.
 ## Models Tab
 
 Control model, LORA, or inference server used.
-
-![ui_9.png](ui_9.png)
 
 To unload a model, use "Choose Model" and select "[None/Remove]".
 
@@ -166,8 +152,6 @@ Note: Compare Mode uses memory for both models, and currently streaming is done 
 
 Control UI size elements and ADMIN access.
 
-![ui_10.png](ui_10.png)
-
 Requires admin password if in public mode (i.e. env HUGGINGFACE_SPACES=1 or GPT_H2O_AI=1)
 
 * Get System Info: Show GPU memory usage, etc. in System Info text box.
@@ -181,12 +165,6 @@ The sidebar and submit buttons can be toggled in UI or CLI.  The tabs can be con
 ```bash
 python generate.py --base_model=h2oai/h2ogpt-4096-llama2-13b-chat --visible_submit_buttons=False --visible_side_bar=False --visible_submit_buttons=False --visible_side_bar=False --visible_chat_tab=False --visible_doc_selection_tab=False --visible_doc_view_tab=False --visible_chat_history_tab=False --visible_expert_tab=False --visible_models_tab=False --visible_system_tab=False --visible_tos_tab=False --visible_hosts_tab=False --chat_tabless=True
 ```
-where one can still at least hit enter to submit queries. This looks like:
-![chat_tabless.png](chat_tabless.png)
-
-One can add `--visible_h2ogpt_header=False` to remove the h2oGPT header, which looks like:
-![chat_headerless.png](chat_headerless.png)
-
 
 For Windows, one can show only the chat view by doing:
 ```winbatch
@@ -195,7 +173,7 @@ For Windows, one can show only the chat view by doing:
 
 which looks like:
 
-![chat_view.png](chat_view.png)
+
 
 ## Login Tab
 
